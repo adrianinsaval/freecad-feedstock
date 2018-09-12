@@ -3,7 +3,7 @@ boost_cpp:
 channel_sources:
 - freecad,conda-forge,defaults
 channel_targets:
-- freecad main
+- freecad dev
 cxx_compiler:
 - toolchain_cxx
 docker_image:
