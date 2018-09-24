@@ -24,6 +24,7 @@ requirements:
         - cmake
         - ninja
         - git
+        - tbb-devel
     host:
         - boost-cpp
         - python
