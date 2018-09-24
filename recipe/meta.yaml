@@ -16,7 +16,7 @@ source:
         - win_unicode.patch
 
 build:
-    number: 7
+    number: 8
 
 requirements:
     build:
@@ -33,6 +33,7 @@ requirements:
         - xerces-c
         - zlib
         - vtk 8.1.1
+        - tbb 2018.0.5  # workaround: pin to this version as the latest tbb need some additional work on other recipes
         - swig
         - eigen
         - pybind11
@@ -51,6 +52,7 @@ requirements:
         - xorg-libxt  # [linux]
     run:
         - {{ pin_compatible("pyside2") }}
+        - {{ pin_compatible("tbb") }}   # workaround for not installing a newer tbb
         - occt
         - vtk
         - qt
