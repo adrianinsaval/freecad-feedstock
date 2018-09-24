@@ -13,8 +13,7 @@ else
 fi
 
 export LIBRARY_PATH=$PREFIX/lib
-# workaround for tbb:  https://github.com/conda-forge/tbb-feedstock/issues/40
-ln -s $PREFIX/lib/libtbb.so.2 $PREFIX/lib/libtbb.so
+
 cmake -G "Ninja" \
       -D BUID_WITH_CONDA:BOOL=ON \
       -D CMAKE_BUILD_TYPE=Release \

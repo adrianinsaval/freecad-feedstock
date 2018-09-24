@@ -49,8 +49,10 @@ requirements:
         - xorg-libxi  # [linux]
         - xorg-libxmu  # [linux]
         - xorg-libxt  # [linux]
+        - tbb 2018*  # [unix]
     run:
         - {{ pin_compatible("pyside2") }}
+        - {{ pin_compatible("tbb") }} # [unix]
         - occt
         - vtk
         - qt
