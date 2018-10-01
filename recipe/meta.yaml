@@ -25,6 +25,7 @@ requirements:
         - ninja
         - git
     host:
+        - tbb-devel
         - boost-cpp
         - python
         - qt
