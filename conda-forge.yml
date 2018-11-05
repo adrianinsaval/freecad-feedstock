@@ -1,6 +1,6 @@
 appveyor:
   BINSTAR_TOKEN:
-    secure: secure: x4wE2url2WOIp0TaFGEfbNNxjmHHsj+25dLvFrzBF1flXGD+pZk3M6LjbiiT1xTY
+    secure: x4wE2url2WOIp0TaFGEfbNNxjmHHsj+25dLvFrzBF1flXGD+pZk3M6LjbiiT1xTY
 
 provider:
   osx: circle
