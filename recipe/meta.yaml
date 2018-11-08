@@ -16,7 +16,7 @@ source:
         - win_unicode.patch
 
 build:
-    number: 16
+    number: 17
 
 requirements:
     build:
