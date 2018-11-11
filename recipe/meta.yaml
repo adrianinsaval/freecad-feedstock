@@ -25,7 +25,7 @@ requirements:
         - ninja
         - git
     host:
-        - tbb-devel 2018.0.5
+        - tbb-devel
         - boost-cpp
         - python
         - qt
@@ -50,6 +50,7 @@ requirements:
         - xorg-libxi  # [linux]
         - xorg-libxmu  # [linux]
         - xorg-libxt  # [linux]
+        - blas * openblas  # [unix]
     run:
         - {{ pin_compatible("pyside2") }}
         - occt
