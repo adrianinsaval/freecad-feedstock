@@ -36,7 +36,6 @@ cmake -G "Ninja" \
       -D BUILD_PLOT:BOOL=OFF \
       -D BUILD_SHIP:BOOL=OFF \
       -D OCCT_CMAKE_FALLBACK:BOOL=OFF \
-      -D FREECAD_USE_QT_DIALOG:BOOL=ON \
       ${SOME_VAR} \
       ${CMAKE_PLATFORM_FLAGS[@]} \
       ..
