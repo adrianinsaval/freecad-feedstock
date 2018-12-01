@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 353940dcc..ca055cfb4 100644
+index c06f9622f..320640094 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -748,7 +748,13 @@ endif()
+@@ -741,7 +741,13 @@ endif()
          else(NOT FREECAD_USE_EXTERNAL_SMESH)
              find_package(SMESH CONFIG)
              set (SMESH_INCLUDE_DIR ${SMESH_INCLUDE_PATH})
