@@ -11,7 +11,6 @@ source:
     git_tag: master
     patches:
         - osx.patch  # [osx]
-        - smesh.patch  # [osx]
         - win_unicode.patch
 
 build:

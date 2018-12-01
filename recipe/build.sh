@@ -7,6 +7,8 @@ if [ `uname` = "Darwin" ]; then
       SOME_VAR="-D BUILD_WEB:BOOL=ON \
                 -D BUILD_START:BOOL=ON \
              "
+      sed -i '' 's/Xcode-9.app/Xcode.app/g' $PREFIX/lib/cmake/opencascade/OpenCASCADEVisualizationTargets.cmake
+fi
 else
       SOME_VAR="-D BUILD_WEB:BOOL=ON \
              "
