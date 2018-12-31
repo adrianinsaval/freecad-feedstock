@@ -14,7 +14,7 @@ source:
         - win_unicode.patch
 
 build:
-    number: 24
+    number: 25
 
 requirements:
     build:
