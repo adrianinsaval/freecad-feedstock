@@ -11,10 +11,9 @@ source:
     git_tag: master
     patches:
         - osx.patch  # [osx]
-        - win_unicode.patch
 
 build:
-    number: 25
+    number: 26
 
 requirements:
     build:
