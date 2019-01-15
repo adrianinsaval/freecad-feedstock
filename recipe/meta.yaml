@@ -39,7 +39,7 @@ requirements:
         - pivy
         - pyside2
         - smesh
-        - netgen
+        - netgen 6.2.1808
         - doxygen
         - hdf5 1.10.1
         - libglu  # [linux]
