@@ -30,8 +30,8 @@ install:
 
     # Add path, activate `conda` and update conda.
     - cmd: call %CONDA_INSTALL_LOCN%\Scripts\activate.bat
-    - cmd: conda update --yes  conda
-    - cmd: conda update --all --yes
+    # - cmd: conda update --yes  conda
+    # - cmd: conda update --all --yes
 
     - cmd: set PYTHONUNBUFFERED=1
 
@@ -39,7 +39,7 @@ install:
     - cmd: conda.exe config --set show_channel_urls true
     - cmd: conda.exe config --remove channels defaults
     - cmd: conda.exe config --add channels defaults
-    - cmd: conda.exe config --add channels conda-forge
+    - cmd: conda.exe config --add channels conda-forge/label/cf201901
 
     # Configure the VM.
     - cmd: conda.exe install -n root --quiet --yes conda-forge-ci-setup=2
