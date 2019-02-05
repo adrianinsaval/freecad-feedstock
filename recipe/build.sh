@@ -40,7 +40,7 @@ cmake -G "Ninja" \
       -D FREECAD_USE_QT_DIALOG:BOOL=ON \
       ${SOME_VAR} \
       ${CMAKE_PLATFORM_FLAGS[@]} \
-      ..
+      /opt/FreeCAD
 
 ninja install
 rm -r ${PREFIX}/doc     # smaller size of package!

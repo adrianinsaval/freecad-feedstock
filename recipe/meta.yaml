@@ -6,11 +6,11 @@ package:
     name: {{ name }}
     version: {{ version }}
 
-source:
-    git_url: https://github.com/FreeCAD/FreeCAD
-    git_tag: master
-    patches:
-        - osx.patch  # [osx]
+# source:
+#     git_url: https://github.com/FreeCAD/FreeCAD
+#     git_tag: master
+#     patches:
+#         - osx.patch  # [osx]
 
 build:
     number: 36
