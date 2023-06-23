@@ -23,7 +23,7 @@ if [[ ${HOST} =~ .*linux.* ]]; then
 fi
 
 
-if [[ ${HOST} =~ .*darwin.* ]] && [[ ${target_platform} =~ osx-64 ]]; then
+if [[ ${HOST} =~ .*darwin.* ]]; then
   # add hacks for osx here!
   echo "adding hacks for osx"
   
@@ -34,11 +34,11 @@ if [[ ${HOST} =~ .*darwin.* ]] && [[ ${target_platform} =~ osx-64 ]]; then
   # should be applied @vtk-feedstock
   # sed -i '381,383d' ${PREFIX}/lib/cmake/vtk-9.0/VTK-targets.cmake
 
-  ln -s /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
-  ln -s /Applications/Xcode.app /Applications/Xcode_11.7.app
+  #ln -s /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+  #ln -s /Applications/Xcode.app /Applications/Xcode_11.7.app
 
   # install space-mouse
-  curl -o /tmp/3dFW.dmg -L 'https://download.3dconnexion.com/drivers/mac/10-6-6_360DF97D-ED08-4ccf-A55E-0BF905E58476/3DxWareMac_v10-6-6_r3234.dmg'
+  curl -o /tmp/3dFW.dmg -L 'https://download.3dconnexion.com/drivers/mac/10-7-4_C5CD2A0D-58B6-4A8F-AFD1-54D5EB1BD29C/3DxWareMac_v10-7-4_r3493.dmg'
   hdiutil attach -readonly /tmp/3dFW.dmg
   sudo installer -package /Volumes/3Dconnexion\ Software/Install\ 3Dconnexion\ software.pkg -target /
   diskutil eject /Volumes/3Dconnexion\ Software
@@ -58,7 +58,7 @@ cmake -G "Ninja" \
       -D CMAKE_LIBRARY_PATH:FILEPATH="$PREFIX/lib" \
       -D CMAKE_INSTALL_LIBDIR:FILEPATH="$PREFIX/lib" \
       -D CMAKE_INCLUDE_PATH:FILEPATH="$PREFIX/include" \
-      -D BUILD_QT5:BOOL=ON \
+      -D BUILD_TEST:BOOL=OFF \
       -D FREECAD_USE_OCC_VARIANT="Official Version" \
       -D OCC_INCLUDE_DIR:FILEPATH="$PREFIX/include" \
       -D USE_BOOST_PYTHON:BOOL=OFF \

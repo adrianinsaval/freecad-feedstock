@@ -1,0 +1,12 @@
+diff --git a/cMake/FreeCAD_Helpers/SetupLibFmt.cmake b/cMake/FreeCAD_Helpers/SetupLibFmt.cmake
+index dcf00c77fd..740a1e683b 100644
+--- a/cMake/FreeCAD_Helpers/SetupLibFmt.cmake
++++ b/cMake/FreeCAD_Helpers/SetupLibFmt.cmake
+@@ -3,7 +3,6 @@ macro(SetupLibFmt)
+        # This internet check idea is borrowed from:
+        # https://stackoverflow.com/questions/62214621/how-to-check-for-internet-connection-with-cmake-automatically-prevent-fails-if
+ 
+-       find_package(fmt QUIET)
+ 
+        if(fmt_FOUND)
+               message(STATUS "find_package() was used to locate fmt version ${fmt_VERSION}")

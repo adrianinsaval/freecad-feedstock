@@ -1,6 +1,6 @@
 {% set name = "freecad" %}
 {% set version = "0.21.pre" %}
-{% set build_number = 119 %}
+{% set build_number = 120 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
@@ -17,6 +17,7 @@ source:
         - patches/do_not_build_tests.patch  # [win]
         - patches/findcoin3d.patch  # [win]
         - patches/osx_arm64_cross_compiling.patch  # [osx and arm64]
+        - patches/fmt_no_find_package.diff
 
 build:
     number: {{ build_number }}
@@ -66,6 +67,7 @@ requirements:
         - six
         - ply
         - matplotlib
+        - {{ pin_compatible('fmt', max_pin='x.x.x') }}
     run:
         - pyside2
         - vtk
@@ -89,11 +91,11 @@ requirements:
         - gmsh
         - graphviz
     run_constrained:
-        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx]
+        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.13") }}  # [osx]
 
 
 about:
-    home: https://www.freecadweb.org/
+    home: https://www.freecad.org/
     license: LGPL2.1
     license_family: LGPL
     license_file: LICENSE
@@ -110,9 +112,10 @@ about:
         Coin 3D library, and a broad Python API. The interface is built with Qt.
         FreeCAD runs exactly the same way on Windows, Mac OSX, BSD and Linux
         platforms.
-    doc_url: https://www.freecadweb.org/wiki/Main_Page
+    doc_url: https://wiki.freecad.org/Main_Page
     dev_url: https://github.com/FreeCAD/FreeCAD
 
 extra:
     recipe-maintainers:
         - looooo
+        - adrianinsaval
