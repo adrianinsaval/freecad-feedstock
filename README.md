@@ -30,7 +30,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>CircleCI</td>
+    <td>
+      <a href="https://circleci.com/gh/conda-forge/freecad-feedstock">
+        <img alt="osx_arm64" src="https://img.shields.io/circleci/project/github/conda-forge/freecad-feedstock/main.svg?label=osx_arm64">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
