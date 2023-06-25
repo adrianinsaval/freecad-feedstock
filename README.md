@@ -34,7 +34,7 @@ Current build status
     <td>CircleCI</td>
     <td>
       <a href="https://circleci.com/gh/conda-forge/freecad-feedstock">
-        <img alt="Linux,osx_arm64" src="https://img.shields.io/circleci/project/github/conda-forge/freecad-feedstock/main.svg?label=Linux,osx_arm64">
+        <img alt="Linux,Arm64,osx_arm64" src="https://img.shields.io/circleci/project/github/conda-forge/freecad-feedstock/main.svg?label=Linux,Arm64,osx_arm64">
       </a>
     </td>
   </tr>

@@ -1,7 +1,7 @@
 provider:
   win: azure
   linux: circle
-  linux_aarch64: azure
+  linux_aarch64: circle
   osx: azure
   osx_arm64: circle
 build_platform:
