@@ -61,7 +61,7 @@ jobs:
   build_osx_arm64_python3.10.____cpython:
     working_directory: ~/test
     macos:
-      xcode: "13.0.0"
+      xcode: "13.4.1"
     resource_class: macos.m1.medium.gen1
     environment:
       - CONFIG: "osx_arm64_python3.10.____cpython"
