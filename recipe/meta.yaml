@@ -47,7 +47,7 @@ requirements:
         - boost-cpp
         - python
         - qt
-        - occt =7.6
+        - occt
         - xerces-c
         - zlib
         - vtk
