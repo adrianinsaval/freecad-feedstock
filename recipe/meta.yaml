@@ -16,7 +16,7 @@ source:
         - patches/qtwebengine_disable_sandbox.patch  # [linux]
         - patches/findcoin3d.patch  # [win]
         - patches/osx_arm64_cross_compiling.patch  # [osx and arm64]
-        - patches/fmt_no_find_package.patch
+        #- patches/fmt_no_find_package.patch
 
 build:
     number: {{ build_number }}
@@ -65,6 +65,7 @@ requirements:
         - six
         - ply
         - matplotlib
+        - fmt
     run:
         - pyside2
         - vtk
@@ -87,6 +88,7 @@ requirements:
         - ply
         - gmsh
         - graphviz
+        - {{ pin_compatible('fmt', max_pin='x.x.x') }}
     run_constrained:
         - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.13") }}  # [osx]
 
