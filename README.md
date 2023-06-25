@@ -34,7 +34,7 @@ Current build status
     <td>CircleCI</td>
     <td>
       <a href="https://circleci.com/gh/conda-forge/freecad-feedstock">
-        <img alt="osx_arm64" src="https://img.shields.io/circleci/project/github/conda-forge/freecad-feedstock/main.svg?label=osx_arm64">
+        <img alt="Linux,osx_arm64" src="https://img.shields.io/circleci/project/github/conda-forge/freecad-feedstock/main.svg?label=Linux,osx_arm64">
       </a>
     </td>
   </tr>
@@ -55,6 +55,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5916&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/freecad-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5916&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/freecad-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
