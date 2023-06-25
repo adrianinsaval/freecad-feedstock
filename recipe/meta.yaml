@@ -1,6 +1,6 @@
 {% set name = "freecad" %}
-{% set version = "0.21.pre" %}
-{% set build_number = 120 %}
+{% set version = "0.21." %}
+{% set build_number = 1 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
@@ -14,16 +14,14 @@ source:
     patches:
         - patches/disable_git_info.patch
         - patches/qtwebengine_disable_sandbox.patch  # [linux]
-        - patches/do_not_build_tests.patch  # [win]
         - patches/findcoin3d.patch  # [win]
         - patches/osx_arm64_cross_compiling.patch  # [osx and arm64]
-        - patches/fmt_no_find_package.diff
+        - patches/fmt_no_find_package.patch
 
 build:
     number: {{ build_number }}
     skip: true  # [py < 310 and unix]
-    skip: true  # [py < 38 and win]
-    skip: true  # [py == 39 and win]
+    skip: true  # [py < 310 and win]
 
 requirements:
     build:
@@ -49,7 +47,7 @@ requirements:
         - boost-cpp
         - python
         - qt
-        - occt
+        - occt ==7.6.3
         - xerces-c
         - zlib
         - vtk
@@ -67,11 +65,10 @@ requirements:
         - six
         - ply
         - matplotlib
-        - {{ pin_compatible('fmt', max_pin='x.x.x') }}
     run:
         - pyside2
         - vtk
-        - occt
+        - occt ==7.6.3
         - qt
         - xerces-c
         - zlib

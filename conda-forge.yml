@@ -2,8 +2,8 @@ provider:
   win: azure
   linux: azure
   osx: azure
-  osx_arm64: circle
+  osx_arm64: azure
 build_platform:
-  osx_arm64: osx_arm64
+  osx_arm64: osx_64
   linux_aarch64: linux_aarch64
 test_on_native_only: true

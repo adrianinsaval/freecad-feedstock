@@ -1,6 +1,6 @@
 channel_sources:
-- freecad/label/dev,conda-forge,defaults
+- adrianinsaval,freecad/label/dev,conda-forge,defaults
 channel_targets:
-- freecad dev
+- adrianinsaval dev
 MACOSX_DEPLOYMENT_TARGET:  # [osx]
 - '10.13'                  # [osx]
