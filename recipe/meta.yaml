@@ -1,6 +1,6 @@
 {% set name = "freecad" %}
 {% set version = "0.21.pre" %}
-{% set build_number = 2 %}
+{% set build_number = 3 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
@@ -43,10 +43,10 @@ requirements:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     host:
-        - boost-cpp
+        - boost-cpp ==1.74.0
         - python
         - qt
-        - occt
+        - occt ==7.6.3
         - xerces-c
         - zlib
         - vtk
