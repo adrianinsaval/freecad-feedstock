@@ -38,7 +38,11 @@ if [[ ${HOST} =~ .*darwin.* ]]; then
   #ln -s /Applications/Xcode.app /Applications/Xcode_11.7.app
 
   # install space-mouse
-  curl -o /tmp/3dFW.dmg -L 'https://download.3dconnexion.com/drivers/mac/10-7-4_C5CD2A0D-58B6-4A8F-AFD1-54D5EB1BD29C/3DxWareMac_v10-7-4_r3493.dmg'
+  if [[ ${target_platform} =~ osx-64 ]]; then
+    curl -o /tmp/3dFW.dmg -L 'https://download.3dconnexion.com/drivers/mac/10-6-7_36E24890-6B5F-443a-8A9F-1851F9ADB985/3DxWareMac_v10-6-7_r3287.dmg'
+  else
+    curl -o /tmp/3dFW.dmg -L 'https://download.3dconnexion.com/drivers/mac/10-7-0_B564CC6A-6E81-42b0-82EC-418EA823B81A/3DxWareMac_v10-7-0_r3411.dmg'
+  fi
   hdiutil attach -readonly /tmp/3dFW.dmg
   sudo installer -package /Volumes/3Dconnexion\ Software/Install\ 3Dconnexion\ software.pkg -target /
   diskutil eject /Volumes/3Dconnexion\ Software
