@@ -1,6 +1,6 @@
 {% set name = "freecad" %}
 {% set version = "0.21.pre" %}
-{% set build_number = 5 %}
+{% set build_number = 6 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
@@ -88,8 +88,8 @@ requirements:
         - gmsh
         - graphviz
     run_constrained:
-        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("12.0") }}  # [osx and amr64]
-        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.10") }}  # [osx and not amr64]
+        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("11.0") }}  # [osx and amr64]
+        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.13") }}  # [osx and not amr64]
 
 
 about:
