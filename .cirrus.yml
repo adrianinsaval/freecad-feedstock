@@ -1,6 +1,7 @@
 macos_task:
     # Basic metadata:
     name: build_osx_arm64_python3.10.____cpython
+    timeout_in: 90m
 
     # The build machine:
     macos_instance:
@@ -26,6 +27,7 @@ macos_task:
 linux_task:
     # Basic metadata:
     name: build_linux_aarch64_python3.10.____cpython
+    timeout_in: 90m
 
     # The build machine:
     compute_engine_instance:
@@ -33,7 +35,7 @@ linux_task:
       image: family/docker-builder-arm64
       platform: linux
       architecture: arm64
-      cpu: 4
+      cpu: 8
       memory: 8G
       #disk: 100 # optional. By default, uses the smallest disk size required by the image.
       nested_virtualization: true
