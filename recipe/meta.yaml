@@ -88,7 +88,7 @@ requirements:
         - gmsh
         - graphviz
     run_constrained:
-        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("11.0") }}  # [osx and amr64]
+        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("12.0") }}  # [osx and amr64]
         - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.10") }}  # [osx and not amr64]
 
 
