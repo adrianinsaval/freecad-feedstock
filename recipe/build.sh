@@ -11,11 +11,7 @@ declare -a CMAKE_PLATFORM_FLAGS
 
 if [[ ${HOST} =~ .*linux.* ]]; then
   echo "adding hacks for linux"
-  # temporary workaround for vtk-cmake setup
-  # should be applied @vtk-feedstock
-  # sed -i '380,384d' ${PREFIX}/lib/cmake/vtk-9.0/VTK-targets.cmake
 
-  # sed -i 's#/home/conda/feedstock_root/build_artifacts/vtk_.*_build_env/x86_64-conda_cos6-linux-gnu/sysroot/usr/lib.*;##g' ${PREFIX}/lib/cmake/vtk-8.2/Modules/vtkhdf5.cmake 
   # temporary workaround for qt-cmake:
   sed -i 's|_qt5gui_find_extra_libs(EGL.*)|_qt5gui_find_extra_libs(EGL "EGL" "" "")|g' $PREFIX/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake
   sed -i 's|_qt5gui_find_extra_libs(OPENGL.*)|_qt5gui_find_extra_libs(OPENGL "GL" "" "")|g' $PREFIX/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake
@@ -29,13 +25,6 @@ if [[ ${HOST} =~ .*darwin.* ]]; then
   
   # delete python3.11 from framework
   rm -rf /Library/Frameworks/Python.framework/Versions/3.11
-
-
-  # should be applied @vtk-feedstock
-  # sed -i '381,383d' ${PREFIX}/lib/cmake/vtk-9.0/VTK-targets.cmake
-
-  #ln -s /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
-  #ln -s /Applications/Xcode.app /Applications/Xcode_11.7.app
 
   # install space-mouse
   if [[ ${target_platform} =~ osx-64 ]]; then
@@ -60,7 +49,6 @@ cmake -G "Ninja" \
       -D CMAKE_LIBRARY_PATH:FILEPATH="$PREFIX/lib" \
       -D CMAKE_INSTALL_LIBDIR:FILEPATH="$PREFIX/lib" \
       -D CMAKE_INCLUDE_PATH:FILEPATH="$PREFIX/include" \
-      -D BUILD_TEST:BOOL=OFF \
       -D FREECAD_USE_OCC_VARIANT="Official Version" \
       -D OCC_INCLUDE_DIR:FILEPATH="$PREFIX/include" \
       -D USE_BOOST_PYTHON:BOOL=OFF \
@@ -69,6 +57,7 @@ cmake -G "Ninja" \
       -D FREECAD_USE_EXTERNAL_SMESH=ON \
       -D BUILD_FLAT_MESH:BOOL=ON \
       -D BUILD_WITH_CONDA:BOOL=ON \
+      -D BUILD_TEST:BOOL=OFF \
       -D Python_EXECUTABLE:FILEPATH="$PYTHON" \
       -D Python3_EXECUTABLE:FILEPATH="$PYTHON" \
       -D BUILD_FEM_NETGEN:BOOL=ON \
