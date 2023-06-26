@@ -43,7 +43,8 @@ if [[ ${HOST} =~ .*darwin.* ]]; then
   else
     curl -o /tmp/3dFW.dmg -L 'https://download.3dconnexion.com/drivers/mac/10-7-0_B564CC6A-6E81-42b0-82EC-418EA823B81A/3DxWareMac_v10-7-0_r3411.dmg'
     if [[ ${build_platform} != ${target_platform} ]]; then
-      CXXFLAGS="${CXXFLAGS} --target=arm64-apple-darwin"
+      CXXFLAGS="${CXXFLAGS} --target=aarch64-apple-darwin"
+      CCFLAGS="${CCFLAGS} --target=aarch64-apple-darwin"
     fi
   fi
   hdiutil attach -readonly /tmp/3dFW.dmg
