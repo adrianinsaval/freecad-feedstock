@@ -6,10 +6,6 @@ channel_sources:
 - adrianinsaval,freecad/label/dev,conda-forge,defaults
 channel_targets:
 - adrianinsaval dev
-cxx_compiler:
-- clangxx
-cxx_compiler_version:
-- '15'
 hdf5:
 - 1.12.2
 macos_machine:
