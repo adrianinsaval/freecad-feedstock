@@ -9,7 +9,7 @@ channel_targets:
 hdf5:
 - 1.12.2
 macos_machine:
-- aarch64-apple-darwin20.0.0
+- arm64-apple-darwin20.0.0
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
