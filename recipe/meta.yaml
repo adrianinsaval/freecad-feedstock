@@ -90,7 +90,7 @@ requirements:
         - graphviz
         - {{ pin_compatible('fmt', max_pin='x.x.x') }}
     run_constrained:
-        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.13") }}  # [osx]
+        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("11.0") }}  # [osx]
 
 
 about:
