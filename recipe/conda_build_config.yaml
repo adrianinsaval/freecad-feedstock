@@ -3,4 +3,5 @@ channel_sources:
 channel_targets:
 - adrianinsaval dev
 MACOSX_DEPLOYMENT_TARGET:  # [osx]
-- '11.0'                  # [osx]
+- '11.0'                  # [osx and arm64]
+- '10.12'                  # [osx and not arm64]
