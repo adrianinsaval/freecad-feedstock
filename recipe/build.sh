@@ -39,7 +39,7 @@ if [[ ${HOST} =~ .*darwin.* ]]; then
 
   # install space-mouse
   if [[ ${target_platform} =~ osx-64 ]]; then
-    curl -o /tmp/3dFW.dmg -L 'https://download.3dconnexion.com/drivers/mac/10-6-7_36E24890-6B5F-443a-8A9F-1851F9ADB985/3DxWareMac_v10-6-7_r3287.dmg'
+    curl -o /tmp/3dFW.dmg -L 'https://download.3dconnexion.com/drivers/mac/10-6-6_360DF97D-ED08-4ccf-A55E-0BF905E58476/3DxWareMac_v10-6-6_r3234.dmg'
   else
     curl -o /tmp/3dFW.dmg -L 'https://download.3dconnexion.com/drivers/mac/10-7-0_B564CC6A-6E81-42b0-82EC-418EA823B81A/3DxWareMac_v10-7-0_r3411.dmg'
   fi
