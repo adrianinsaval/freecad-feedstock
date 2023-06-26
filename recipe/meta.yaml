@@ -45,11 +45,11 @@ requirements:
     host:
         - boost-cpp ==1.74.0
         - python
-        - qt
+        - qt ==5.15
         - occt ==7.6.3
         - xerces-c
         - zlib
-        - vtk
+        - vtk ==9.1.0
         - swig
         - eigen
         - pybind11
@@ -58,31 +58,31 @@ requirements:
         - smesh ==9.9
         - doxygen  # [build_platform == target_platform]
         - hdf5
-        - freetype
+        - freetype ==2
         - libspnav  # [linux]
-        - pcl
+        - pcl ==1.12.1
         - six
         - ply
         - matplotlib
     run:
         - pyside2
-        - vtk
+        - {{ pin_compatible('vtk', max_pin='x.x.x') }}
         - {{ pin_compatible('occt', max_pin='x.x.x') }}
         - qt
         - xerces-c
         - zlib
         - boost-cpp
-        - hdf5
+        - hdf5 ==1.12.2
         - python
         - coin3d
         - pivy
         - {{ pin_compatible('smesh', max_pin='x.x.x') }}
-        - freetype
+        - freetype ==2
         - numpy
         - six
         - pyyaml
         - libspnav  # [linux]
-        - pcl
+        - pcl ==1.12.1
         - ply
         - gmsh
         - graphviz
