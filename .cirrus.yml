@@ -29,9 +29,10 @@ linux_task:
 
     # The build machine:
     arm_container:
-        image: ubuntu:20.04
+        image: ghcr.io/actions/actions-runner-controller/actions-runner:ubuntu-20.04
         cpu: 4
         memory: 8G
+        kvm: true
 
     # Environment variables:
     env:
