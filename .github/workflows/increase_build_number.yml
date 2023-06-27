@@ -1,7 +1,7 @@
-name: increase build-number
+name: increase build_number
 on:
   schedule:
-   - cron: "0 6 * * 0/4"
+   - cron: "0 5 * * 0/4"
   workflow_dispatch:
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
         run: date +%s > report.txt
       - name: Commit report
         run: |
-          git config --global user.name 'looooo'
-          git config --global user.email 'sppedflyer@gmail.com'
-          git commit -am "+=1"
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -am "build_number +=1"
           git push
