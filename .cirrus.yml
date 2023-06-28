@@ -36,7 +36,7 @@ linux_task:
       platform: linux
       architecture: arm64
       cpu: 8
-      memory: 8G
+      memory: 12G
       #disk: 100 # optional. By default, uses the smallest disk size required by the image.
       nested_virtualization: true
 

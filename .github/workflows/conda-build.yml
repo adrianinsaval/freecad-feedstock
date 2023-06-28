@@ -77,16 +77,17 @@ jobs:
       shell: cmd
       run: |
         call activate base
-        mamba.exe install -c conda-forge 'python=3.10' conda-build conda pip boa conda-forge-ci-setup=3
+        mamba.exe install 'python=3.10' conda-build conda pip boa conda-forge-ci-setup=3 -c conda-forge --strict-channel-priority --yes
         if errorlevel 1 exit 1
         setup_conda_rc .\ ".\recipe" .\.ci_support\%CONFIG%.yaml
         if errorlevel 1 exit 1
         
+        run_conda_forge_build_setup
 
         if EXIST LICENSE.txt (
           copy LICENSE.txt "recipe\\recipe-scripts-license.txt"
         )
-        conda.exe mambabuild "recipe" -m .ci_support\%CONFIG%.yaml
+        conda.exe mambabuild "recipe" -m .ci_support\%CONFIG%.yaml --suppress-variables
         if errorlevel 1 exit 1
         set "FEEDSTOCK_NAME=%GITHUB_REPOSITORY:*/=%"
         set "GIT_BRANCH=%GITHUB_REF:refs/heads/=%"
