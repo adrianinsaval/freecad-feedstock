@@ -78,8 +78,7 @@ jobs:
       run: |
         call activate base
         mamba.exe install 'python=3.10' conda-build conda pip boa conda-forge-ci-setup=3 -c conda-forge --strict-channel-priority --yes
-        setup_conda_rc .\ ".\recipe" .\.ci_support\%CONFIG%.yaml      
-        run_conda_forge_build_setup
+        setup_conda_rc .\ ".\recipe" .\.ci_support\%CONFIG%.yaml
         if EXIST LICENSE.txt (
           copy LICENSE.txt "recipe\\recipe-scripts-license.txt"
         )
