@@ -1,7 +1,7 @@
 name: increase build_number
 on:
   schedule:
-   - cron: "0 5 * * 0/4"
+   - cron: "0 6 * * 0,4"
   workflow_dispatch:
 
 jobs:
