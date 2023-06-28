@@ -1,6 +1,6 @@
 {% set name = "freecad" %}
 {% set version = "0.21.pre" %}
-{% set build_number = 11 %}
+{% set build_number = 12 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
@@ -59,7 +59,7 @@ requirements:
         - smesh ==9.9
         - doxygen  # [build_platform == target_platform]
         - hdf5
-        - freetype ==2
+        - freetype
         - libspnav  # [linux]
         - pcl ==1.12.1
         - six
@@ -78,7 +78,7 @@ requirements:
         - coin3d
         - pivy
         - {{ pin_compatible('smesh', max_pin='x.x.x') }}
-        - freetype ==2
+        - freetype
         - numpy
         - six
         - pyyaml
