@@ -6,6 +6,8 @@ channel_sources:
 - adrianinsaval,freecad/label/dev,conda-forge,defaults
 channel_targets:
 - adrianinsaval dev
+freetype:
+- '2'
 hdf5:
 - 1.12.2
 macos_machine:

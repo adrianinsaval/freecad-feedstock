@@ -1,8 +1,8 @@
 provider:
-  win: gtihub_actions
-  linux: gtihub_actions
+  win: github_actions
+  linux_64: github_actions
   linux_aarch64: circle
-  osx_64: gtihub_actions
+  osx_64: github_actions
   osx_arm64: circle
 build_platform:
   osx_arm64: osx_arm64

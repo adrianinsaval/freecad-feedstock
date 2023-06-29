@@ -6,6 +6,8 @@ channel_targets:
 - adrianinsaval dev
 cxx_compiler:
 - vs2019
+freetype:
+- '2'
 hdf5:
 - 1.12.2
 pin_run_as_build:

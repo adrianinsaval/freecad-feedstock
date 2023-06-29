@@ -1,6 +1,6 @@
 {% set name = "freecad" %}
 {% set version = "0.21.pre" %}
-{% set build_number = 12 %}
+{% set build_number = 13 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
@@ -14,13 +14,12 @@ source:
     patches:
         - patches/disable_git_info.patch
         - patches/qtwebengine_disable_sandbox.patch  # [linux]
-        - patches/osx_arm64_cross_compiling.patch  # [osx and arm64]
+        - patches/osx_arm64_cross_compiling.patch    # [osx and arm64]
         - patches/fmt_no_find_package.patch
 
 build:
     number: {{ build_number }}
-    skip: true  # [py < 310 and unix]
-    skip: true  # [py < 310 and win]
+    skip: true  # [py < 310]
 
 requirements:
     build:
@@ -40,7 +39,7 @@ requirements:
         - {{ cdt('libxi-devel') }}           # [linux]
         - cmake
         - ninja
-        - sed  # [unix]
+        - sed                                    # [unix]
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     host:
@@ -88,8 +87,8 @@ requirements:
         - gmsh
         - graphviz
     run_constrained:
-        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("11.0") }}  # [osx and amr64]
-        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.13") }}  # [osx and not amr64]
+        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("11.0") }}   # [osx and arm64]
+        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.13") }}  # [osx and x86_64]
 
 
 about:
