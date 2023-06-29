@@ -106,4 +106,4 @@ jobs:
         CI: github_actions
         UPLOAD_PACKAGES: ${{ matrix.UPLOAD_PACKAGES }}
         BINSTAR_TOKEN: ${{ secrets.BINSTAR_TOKEN }}
-      if: matrix.os == 'windows'
+      if: matrix.os == 'windows-2019'
