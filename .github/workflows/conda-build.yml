@@ -3,9 +3,10 @@
 # -*- mode: yaml -*-
 
 name: Build conda package
-on: [push, pull_request]
+on:
   push:
   pull_request:
+  workflow_dispatch:
   workflow_run:
     workflows: ["increase build_number"]
     types:
