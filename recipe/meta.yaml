@@ -48,7 +48,7 @@ requirements:
         - python
         - qt-main
         - qt-webengine
-        - occt
+        - occt ==7.6.3
         - xerces-c
         - zlib
         - vtk
