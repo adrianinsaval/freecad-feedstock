@@ -6,12 +6,18 @@ channel_sources:
 - adrianinsaval,freecad/label/dev,conda-forge,defaults
 channel_targets:
 - adrianinsaval dev
+cxx_compiler:
+- clangxx
+cxx_compiler_version:
+- '15'
 freetype:
 - '2'
 hdf5:
 - 1.12.2
 macos_machine:
 - arm64-apple-darwin20.0.0
+pcl:
+- 1.13.0
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
@@ -20,10 +26,12 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - 3.10.* *_cpython
-qt:
+qt_main:
 - '5.15'
 target_platform:
 - osx-arm64
+vtk:
+- 9.2.5
 xerces_c:
 - '3.2'
 zlib:
