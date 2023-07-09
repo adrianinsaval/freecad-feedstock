@@ -66,6 +66,7 @@ requirements:
         - six
         - ply
         - matplotlib
+        - curl    # [osx and build_platform != target_platform]
     run:
         - pyside2
         - {{ pin_compatible('vtk', max_pin='x.x.x') }}
@@ -90,7 +91,7 @@ requirements:
         - gmsh
         - graphviz
     run_constrained:
-        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.12") }}  # [osx and x86_64]
+        - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.13") }}  # [osx and x86_64]
         - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("11.0") }}    # [osx and arm64]
 
 # test:
