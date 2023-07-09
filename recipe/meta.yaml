@@ -57,7 +57,7 @@ requirements:
         - pybind11
         - coin3d
         - pyside2
-        - smesh ==9.8.0.2
+        - smesh
         - doxygen  # [build_platform == target_platform]
         - hdf5
         - freetype
@@ -68,8 +68,8 @@ requirements:
         - matplotlib
     run:
         - pyside2
-        - vtk
-        - occt
+        - {{ pin_compatible('vtk', max_pin='x.x.x') }}
+        - {{ pin_compatible('occt', max_pin='x.x.x') }}
         - qt-main
         - qt-webengine
         - xerces-c
