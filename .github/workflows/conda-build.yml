@@ -30,6 +30,9 @@ jobs:
           - CONFIG: osx_64_python3.10.____cpython
             UPLOAD_PACKAGES: True
             os: macos-latest
+          - CONFIG: osx_arm64_python3.10.____cpython
+            UPLOAD_PACKAGES: True
+            os: macos-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
