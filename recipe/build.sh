@@ -73,8 +73,6 @@ cmake -G "Ninja" \
       ${CMAKE_PLATFORM_FLAGS[@]} \
       ..
 
-echo "FREECAD_USE_3DCONNEXION=${FREECAD_USE_3DCONNEXION}"
-
 ninja install
 rm -r ${PREFIX}/share/doc/FreeCAD     # smaller size of package!
 mv ${PREFIX}/bin/FreeCAD ${PREFIX}/bin/freecad
