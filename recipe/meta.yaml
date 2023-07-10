@@ -59,7 +59,7 @@ requirements:
         - doxygen  # [build_platform == target_platform]
         - hdf5
         - freetype
-        - libspnav  =1.* # [linux]
+        - libspnav # [linux]
         - pcl
         - six
         - ply
