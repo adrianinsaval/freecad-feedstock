@@ -27,9 +27,6 @@ jobs:
           - CONFIG: win_64_python3.10.____cpython
             UPLOAD_PACKAGES: True
             os: windows-2019
-          - CONFIG: osx_64_python3.10.____cpython
-            UPLOAD_PACKAGES: True
-            os: macos-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
