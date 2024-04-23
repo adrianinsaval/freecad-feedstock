@@ -11,7 +11,7 @@ cdt_name:
 channel_sources:
 - freecad/label/dev,conda-forge,defaults
 channel_targets:
-- freecad dev
+- freecad qt6
 cxx_compiler:
 - gxx
 cxx_compiler_version:
@@ -36,8 +36,8 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - 3.11.* *_cpython
-qt_main:
-- '5.15'
+qt6_main:
+- '6.6'
 target_platform:
 - linux-aarch64
 vtk:

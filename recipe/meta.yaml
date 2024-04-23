@@ -1,6 +1,6 @@
 {% set name = "freecad" %}
 {% set version = "0.22.pre" %}
-{% set build_number = 53 %}
+{% set build_number = 0 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
@@ -42,7 +42,7 @@ requirements:
     host:
         - libboost-devel
         - python
-        - qt-main
+        - qt6-main
         - occt
         - xerces-c
         - zlib
@@ -50,7 +50,7 @@ requirements:
         - eigen
         - pybind11
         - coin3d
-        - pyside2
+        - pyside6
         - smesh
         - doxygen  # [build_platform == target_platform]
         - hdf5
@@ -62,10 +62,10 @@ requirements:
         - matplotlib-base
         - yaml-cpp
     run:
-        - pyside2
+        - pyside6
         - vtk
         - {{ pin_compatible('occt', max_pin='x.x.x') }}
-        - qt-wayland # [linux]
+        - qt6-wayland # [linux]
         - xerces-c
         - zlib
         - hdf5
