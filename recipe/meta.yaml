@@ -1,6 +1,6 @@
 {% set name = "freecad" %}
 {% set version = "1.1dev" %}
-{% set build_number = 18 %}
+{% set build_number = 19 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
 package:
@@ -43,7 +43,7 @@ requirements:
     host:
         - libboost-devel
         - python
-        - qt-main
+        - qt-main 5.15.13
         - occt
         - xerces-c
         - zlib
