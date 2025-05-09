@@ -34,7 +34,7 @@ requirements:
         - {{ cdt('xorg-x11-server-xvfb') }}  # [linux]
         - {{ cdt('libxau') }}                # [linux]
         - {{ cdt('libxi-devel') }}           # [linux]
-        - cmake
+        - cmake <4
         - swig
         - ninja
         - sed                                    # [unix]
@@ -62,7 +62,7 @@ requirements:
         - ply
         - matplotlib-base
         - yaml-cpp
-        - pivy
+        - pivy * qt5*
         - noqt6
     run:
         - pyside2
@@ -73,7 +73,7 @@ requirements:
         - hdf5
         - python
         - coin3d
-        - pivy
+        - pivy * qt5*
         - {{ pin_compatible('smesh', max_pin='x.x.x') }}
         - freetype
         - numpy
