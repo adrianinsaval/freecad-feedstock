@@ -1,5 +1,5 @@
 channel_sources:
-- freecad,conda-forge
+- freecad/label/qt5,conda-forge
 channel_targets:
 - freecad main
 c_stdlib_version:     # [osx]

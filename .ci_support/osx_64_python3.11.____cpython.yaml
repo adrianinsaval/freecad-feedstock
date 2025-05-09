@@ -7,7 +7,7 @@ c_stdlib:
 c_stdlib_version:
 - '10.13'
 channel_sources:
-- freecad,conda-forge
+- freecad/label/qt5,conda-forge
 channel_targets:
 - freecad main
 cxx_compiler:
