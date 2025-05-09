@@ -38,19 +38,19 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-freecad-green.svg)](https://anaconda.org/freecad/freecad) | [![Conda Downloads](https://img.shields.io/conda/dn/freecad/freecad.svg)](https://anaconda.org/freecad/freecad) | [![Conda Version](https://img.shields.io/conda/vn/freecad/freecad.svg)](https://anaconda.org/freecad/freecad) | [![Conda Platforms](https://img.shields.io/conda/pn/freecad/freecad.svg)](https://anaconda.org/freecad/freecad) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-freecad-green.svg)](https://anaconda.org/adrianinsaval/freecad) | [![Conda Downloads](https://img.shields.io/conda/dn/adrianinsaval/freecad.svg)](https://anaconda.org/adrianinsaval/freecad) | [![Conda Version](https://img.shields.io/conda/vn/adrianinsaval/freecad.svg)](https://anaconda.org/adrianinsaval/freecad) | [![Conda Platforms](https://img.shields.io/conda/pn/adrianinsaval/freecad.svg)](https://anaconda.org/adrianinsaval/freecad) |
 
 Installing freecad
 ==================
 
-Installing `freecad` from the `freecad` channel can be achieved by adding `freecad` to your channels with:
+Installing `freecad` from the `adrianinsaval` channel can be achieved by adding `adrianinsaval` to your channels with:
 
 ```
-conda config --add channels freecad
+conda config --add channels adrianinsaval
 conda config --set channel_priority strict
 ```
 
-Once the `freecad` channel has been enabled, `freecad` can be installed with `conda`:
+Once the `adrianinsaval` channel has been enabled, `freecad` can be installed with `conda`:
 
 ```
 conda install freecad
@@ -65,26 +65,26 @@ mamba install freecad
 It is possible to list all of the versions of `freecad` available on your platform with `conda`:
 
 ```
-conda search freecad --channel freecad
+conda search freecad --channel adrianinsaval
 ```
 
 or with `mamba`:
 
 ```
-mamba search freecad --channel freecad
+mamba search freecad --channel adrianinsaval
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search freecad --channel freecad
+mamba repoquery search freecad --channel adrianinsaval
 
 # List packages depending on `freecad`:
-mamba repoquery whoneeds freecad --channel freecad
+mamba repoquery whoneeds freecad --channel adrianinsaval
 
 # List dependencies of `freecad`:
-mamba repoquery depends freecad --channel freecad
+mamba repoquery depends freecad --channel adrianinsaval
 ```
 
 
@@ -98,8 +98,8 @@ package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
-`freecad` channel, whereupon the built conda packages will be available for
-everybody to install and use from the `freecad` channel.
+`adrianinsaval` channel, whereupon the built conda packages will be available for
+everybody to install and use from the `adrianinsaval` channel.
 Note that all branches in the conda-forge/freecad-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to

@@ -9,7 +9,7 @@ c_stdlib_version:
 channel_sources:
 - freecad/label/qt5,conda-forge
 channel_targets:
-- freecad main
+- adrianinsaval main
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
