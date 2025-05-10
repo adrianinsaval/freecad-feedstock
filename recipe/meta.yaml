@@ -62,7 +62,7 @@ requirements:
         - ply
         - matplotlib-base
         - yaml-cpp
-        - pivy * qt5*
+        - pivy
         - noqt6
     run:
         - pyside2
@@ -73,7 +73,7 @@ requirements:
         - hdf5
         - python
         - coin3d
-        - pivy * qt5*
+        - pivy
         - {{ pin_compatible('smesh', max_pin='x.x.x') }}
         - freetype
         - numpy
